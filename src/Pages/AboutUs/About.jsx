@@ -9,6 +9,7 @@ import image3 from '../../images/download (2).png'
 import image4 from '../../images/download (3).png'
 import gmap from '../../images/gmap.png'
 
+
 const About = () => {
   useEffect(() => {
     window.scrollTo({
