@@ -19,7 +19,7 @@ const Checkout = () => {
 
   const getApiData = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/get-user/" + userId)
+      const res = await axios.get("https://swhealthcare.digiindiasolutions.com/api/get-user/" + userId)
       console.log(res)
       if (res.status === 200) {
         setUserData(res.data.data)
@@ -88,7 +88,7 @@ const Checkout = () => {
     const pincode = shippingAddress.postalCode;
     if (pincode) {
       try {
-        const response = await axios.get("http://localhost:8000/api/all-pincode");
+        const response = await axios.get("https://swhealthcare.digiindiasolutions.com/api/all-pincode");
         console.log(response)
         const pinCodeData = response.data.find(item => item.pincode === parseInt(pincode));
         if (pinCodeData) {
@@ -143,7 +143,7 @@ const Checkout = () => {
         };
 
         try {
-          const res = await axios.post("http://localhost:8000/api/checkout", checkoutData);
+          const res = await axios.post("https://swhealthcare.digiindiasolutions.com/api/checkout", checkoutData);
           console.log(res);
           if (res.status === 201) {
             if (paymentMethod === "Online") {
@@ -156,7 +156,7 @@ const Checkout = () => {
                 description: "Checkout Payment",
                 order_id: razorpayOrder.id,
                 handler: async (response) => {
-                  const verifyResponse = await axios.post("http://localhost:8000/api/payment/verify", {
+                  const verifyResponse = await axios.post("https://swhealthcare.digiindiasolutions.com/api/payment/verify", {
                     razorpay_payment_id: response.razorpay_payment_id,
                     razorpay_order_id: response.razorpay_order_id,
                     razorpay_signature: response.razorpay_signature,

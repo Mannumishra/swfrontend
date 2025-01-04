@@ -26,7 +26,7 @@ const Hero = () => {
     const fetchBanners = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('http://localhost:8000/api/all-banner');
+        const response = await axios.get('https://swhealthcare.digiindiasolutions.com/api/all-banner');
         console.log(response)
         const newData = response.data.banners
         const filterData = newData.filter((x) => x.bannerStatus === true)
@@ -45,7 +45,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/get-product");
+        const response = await axios.get("https://swhealthcare.digiindiasolutions.com/api/get-product");
         const productData = response.data.products || [];
         const bestsellers = productData.filter((product) => product.bestseller === true);
         setProducts(bestsellers);

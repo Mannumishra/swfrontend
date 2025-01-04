@@ -15,7 +15,7 @@ const Products = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/all-category");
+        const response = await axios.get("https://swhealthcare.digiindiasolutions.com/api/all-category");
         const fetchedCategories = response.data;
         setCategories(fetchedCategories);
 
@@ -34,7 +34,7 @@ const Products = () => {
 
   const fetchProducts = async (categoryId) => {
     try {
-      const response = await axios.get("http://localhost:8000/api/get-product");
+      const response = await axios.get("https://swhealthcare.digiindiasolutions.com/api/get-product");
       const filteredProducts = response.data.products.filter(
         (product) => product.categoryName._id === categoryId
       );

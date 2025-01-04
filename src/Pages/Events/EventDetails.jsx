@@ -9,7 +9,7 @@ const EventDetails = () => {
 
     const getEventDetails = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/get-single-events/${id}`);
+            const response = await axios.get(`https://swhealthcare.digiindiasolutions.com/api/get-single-events/${id}`);
             setEvent(response.data);
         } catch (error) {
             console.error('Error fetching event details:', error);

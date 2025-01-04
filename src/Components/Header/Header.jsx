@@ -31,7 +31,7 @@ const Header = () => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:8000/api/search`, {
+      const response = await axios.get(`https://swhealthcare.digiindiasolutions.com/api/search`, {
         params: { productName: value }, // Pass query params in Axios
       });
       console.log(response)
