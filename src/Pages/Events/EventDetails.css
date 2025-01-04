@@ -1,0 +1,49 @@
+/* External CSS for EventDetails */
+.event-details {
+    padding: 5rem 0;
+}
+
+.event-details .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-details .event-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.event-details .event-header h2 {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.event-details .event-header h3 {
+    color: #6c757d;
+    font-size: 1.8rem;
+}
+
+.event-details .event-image {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.event-details .event-image img {
+    max-width: 50%;
+    height: auto;
+}
+
+.event-details .event-content {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 1.5rem;
+}
+
+.event-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
